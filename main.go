@@ -2,6 +2,7 @@ package main
 
 import (
 	"log"
+	"os"
 
 	"example.com/login/configs/mongodb"
 	"example.com/login/routes"
@@ -11,9 +12,13 @@ import (
 )
 
 func main() {
-	err := godotenv.Load()
-	if err != nil {
-		log.Fatalln(".env file not found.")
+	if os.Getenv("ENV") != "PROD" {
+		err := godotenv.Load()
+		if err != nil {
+			log.Fatalln(".env file not found.")
+		}
+	} else {
+		log.Println("Running in PROD mode.")
 	}
 
 	mongodb.ConnectMongoDB()

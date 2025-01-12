@@ -131,6 +131,7 @@ You can access the following pages directly:
 - **MONGODB\_URI:**  Mongo DB connection string.
 - **MONGO\_DATABASE:** Name of the database.
 - **JWT\_SECRET:** Secret key for JWT encoding.
+- **ENV:** Project environment "PROD" or "DEV".
 
 ---
 

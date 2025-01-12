@@ -1,0 +1,4 @@
+curl -X POST "127.0.0.1:3000/api/v1/login" -d "email=jackson8000@gmail.com&password=pass1234"
+curl -X POST "127.0.0.1:3000/api/v1/register" -d "name=Jackson Miller&email=jackson8000@gmail.com&password=pass1234"
+curl -X GET "127.0.0.1:3000/api/v1/logout"
+curl -X GET "127.0.0.1:3000/api/v1/user"
